@@ -1,3 +1,3 @@
 # CS350_Assignment01
 
-Just a test and setting up repo
+This is Assignment 1 repo for the class: CS350
