@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 -- Question 3 Solution
 -- Author: Mike Nguyen 
 
@@ -33,3 +27,23 @@ employees e
 join 
 departments d ON e.department_id = d.department_id
 WHERE d.department_name LIKE '%Finance'
+
+
+-- Question 12 Solution
+-- Author: Mike Nguyen 
+
+
+
+SELECT employee_id, last_name
+FROM
+employees e
+join
+departments d ON e.department_id = d.department_id
+WHERE d.department_name LIKE '%Public Relations'
+UNION
+SELECT employee_id, last_name
+FROM
+employees e
+join
+departments d ON e.department_id = d.department_id
+WHERE e.salary > 9000;
