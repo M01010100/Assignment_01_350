@@ -31,16 +31,9 @@ on e1.department_id = d1.department_id
 where d1.department_name = 'IT'
 and e1.salary > (select e2.salary
 from employees e2
-where e2.employee_id = (select distinct manager_id
-from employees e3
-join departments d3
-on e3.department_id = d3.department_id
-where d3.department_name = 'Shipping'
-and manager_id not in (select employee_id
-from employees e4
-join departments d4
-on e4.department_id = d4.department_id
-where d4.department_name = 'Shipping')));
+join jobs j2
+on e2.job_id = j2.job_id
+where j2.job_title = 'Shipping Manager');
 
 /* Problem 13 Solution */
 /* Author: Connor George */
